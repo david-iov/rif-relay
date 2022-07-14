@@ -79,7 +79,7 @@ commands:
 jobs:
   CodeStyle Checks:
     docker:
-      - image: 'cimg/node:16.15'
+      - image: 'cimg/openjdk:8.0.292-node'
     steps:
       - prepare_container
       - pre-checks
