@@ -23,14 +23,14 @@ commands:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
 
   prepare_container:
-        description: 'Preparing Rif Relay Container'
-        steps:
-            - checkout # special step to check out source code to working directory
-            - restore_cache: # special step to restore the dependency cache
-                  key: dependency-cachev7-{{ checksum "package.json" }}-npm
-            - run:
-                  name: Installing Rif Relay
-                  command: npm install
+    description: 'Preparing Rif Relay Container'
+    steps:
+      - checkout # special step to check out source code to working directory
+      - restore_cache: # special step to restore the dependency cache
+            key: dependency-cachev7-{{ checksum "package.json" }}-npm
+      - run:
+            name: Installing Rif Relay
+            command: npm install
 
   pre-checks:
     description: 'Execute build and code style checks'
