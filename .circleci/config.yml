@@ -34,16 +34,16 @@ commands:
 
   pre-checks:
     description: 'Execute build and code style checks'
-      steps:
-        - run:
-            name: Build
-            command: npm run build
-        - run:
-            name: Linter
-            command: npm run lint
-        - run:
-            name: Prettier
-            command: npm run prettier
+    steps:
+    - run:
+        name: Build
+        command: npm run build
+    - run:
+        name: Linter
+        command: npm run lint
+    - run:
+        name: Prettier
+        command: npm run prettier
 
   run_rskj_node:
     description: Create network and Run RSKJ Container Image on Remote Docker
