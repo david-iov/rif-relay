@@ -9,6 +9,6 @@ docker run -p 127.0.0.1:4444:4444 -p 127.0.0.1:4445:4445  --name enveloping-rskj
 You could also use docker-compose:
 
 ```
-docker-compose up --build -d
+docker-compose up -d
 ```
 
